@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace  Program69
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            object o = 42;
+
+            // Современный способ (твой код)
+            if (o is int valModern && valModern > 40)
+            {
+                Console.WriteLine("Современный стиль: проверка типа + условие в одном if.");
+            }
+
+            // Старый способ (для сравнения)
+            if (o is int)
+            {
+                int valOld = (int)o;
+                if (valOld > 40)
+                {
+                    Console.WriteLine("Старый стиль: отдельные шаги.");
+                }
+            }
+        }
+    }
+}
